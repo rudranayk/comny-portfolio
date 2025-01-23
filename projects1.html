@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contact="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profile-2.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <style>
+        /* Add some basic styling to the Contact page */
+
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.contact-info {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+    </style>
+</head>
+<body>
+    <!-- Contact Page -->
+
+<!-- Contact Form -->
+<div class="contact-form">
+    <h2>Get in Touch</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+  
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone">
+  
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+  
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+  
+  <!-- Contact Information -->
+  <div class="contact-info">
+    <h2>Contact Information</h2>
+    <ul>
+     <li><i class="fa fa-map-marker" aria-hidden="true"></i> A-2, Nayk Nager, Near lifeline Hospital, idar, Sabarkantha-383430</li>
+       <li> <i class="fa fa-phone" aria-hidden="true"></i> +91 7203914679</li>
+      <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="rudranayak@gmail.com">rudranayak@gmail.com</a></li>
+      <li> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.4119215502396!2d72.99815221057263!3d23.83950227852038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395da3e538a2c807%3A0x370fcce50e488914!2sLife%20Line%20Multi%20Speciality%20Hospital%20and%20research%20centre%20-%20Best%20Multispeciality%20Hospital!5e0!3m2!1sen!2sin!4v1737615418940!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+    </ul>
+  </div>
+  <script>
+document.addEventListener`("DOMContentLoaded", function() {`
+  const form = document.querySelector(".contact-form");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Send the form data to the server using AJAX or another method
+    console.log("Form submitted!");
+    document.addEventListener("DOMContentLoaded", function () {
+  // Check for saved credentials in local storage
+  const savedUsername = localStorage.getItem("username");
+  const savedPassword = localStorage.getItem("password");
+  
+  // If credentials exist, auto-fill the form
+  if (savedUsername && savedPassword) {
+    document.getElementById("username").value = savedUsername;
+    document.getElementById("password").value = savedPassword;
+
+function saveCredentials(event) {
+  event.preventDefault(); // Prevent form submission for demo purposes
+  
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  
+  // Save credentials to local storage (Note: Not safe for production)
+  localStorage.setItem("username", username);
+  localStorage.setItem("password", password);
+
+  alert("Credentials saved! You can now close the browser and reload the page.");
+  
+  // Here you would normally submit the form to the server
+}
+  }
+  });
+});
+  </script>
+</body>
+</html>
